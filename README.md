@@ -1,2 +1,2 @@
 # learning-rust
-Learning Rust
+Learning Rust - a collection of things I make while learning rust. Following tutorial here [https://doc.rust-lang.org/rust-by-example/index.html](https://doc.rust-lang.org/rust-by-example/index.html)
