@@ -1,0 +1,1 @@
+/home/stuartwilcox/Documents/learning-rust/examples/matrix/target/debug/rust-graphics: /home/stuartwilcox/Documents/learning-rust/examples/matrix/src/main.rs /home/stuartwilcox/Documents/learning-rust/examples/matrix/src/matrix/mod.rs
