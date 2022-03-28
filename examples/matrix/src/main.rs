@@ -1,6 +1,4 @@
-mod matrix;
-
-type Matrix = matrix::Matrix;
+use matrix::Matrix;
 
 fn main() {
     // create two matrices

@@ -1,7 +1,6 @@
 use std::ops::{Index, IndexMut, Add, Sub, Mul};
 use std::fmt::{Debug,Formatter,Result};
 use std::cmp::{PartialEq, Eq};
-use std::marker::Copy;
 use std::clone::Clone;
 
 // definition for Matrix struct
@@ -50,16 +49,16 @@ impl Matrix {
 
     pub fn from_vector(rows: Vec<Vec<f32>>) -> Matrix {
         let mut copy_rows: Vec<Vec<f32>> = Vec::new();
-        let mut n = 0;
-        let m = rows.capacity();
+        let mut m = 0;
+        let n = rows.capacity();
         for row in rows {
             let row_length = row.capacity();
 
-            if n == 0 {
-                n = row_length;
+            if m == 0 {
+                m = row_length;
             }
 
-            if n != row_length {
+            if m != row_length {
                 panic!("Supplied rows are all different lengths! Rows must all be same length");
             }
 
@@ -154,7 +153,7 @@ impl Mul<Matrix> for Matrix {
 
     fn mul(self, rhs: Self) -> Self {
         // size must match to multiply
-        if self.n == rhs.m {
+        if self.m == rhs.n {
             let mut rows: Vec<Vec<f32>> = Vec::new();
 
             // initialize all matrix cells to zero
